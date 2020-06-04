@@ -29,7 +29,8 @@ class Register extends Component {
             this.props.history.push('/dashboard')
         })
         .catch(err => {
-            alert('Could not register')
+            console.log(err.response.data)
+            alert(err.response.data)
         })
     }
 

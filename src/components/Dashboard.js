@@ -5,7 +5,9 @@ import {getUser} from '../redux/reducer';
 class Dashboard extends Component {
 
     componentDidMount(){
-        this.props.getUser();
+        this.props.getUser().catch(() => {
+            this.props.history.push('/')
+        });
     }
 
     render(){
