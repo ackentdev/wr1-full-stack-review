@@ -28,7 +28,7 @@ export default function (state = initialState, action){
         case LOGIN_USER:
             return {...state, user: action.payload, isLoggedIn: true}
         case LOGOUT_USER:
-            return {...state, ...action.payload}
+            return {...state ,...action.payload}
         default:
             return initialState
     }

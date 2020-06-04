@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import './App.css';
 
 function App(props) {
-  console.log("look at me! ", props)
+  // console.log("look at me! ", props)
   return (
     <div className="App">
      {routes}
