@@ -14,7 +14,7 @@ function Profile(props) {
 
     return (
         <div>
-            <p>This is the Profile Component</p>
+            <p>Welcome {props.user.email}</p>
             <button onClick={() => logout() }>Logout</button>
         </div>
     )
