@@ -83,8 +83,8 @@ post:
     - index.js
     - reset.css
     - redux/
-        - store
-        - reducer
+        - store.js
+        - reducer.js
     - components/
         - Landing.js /.css
         - Register.js /.css
