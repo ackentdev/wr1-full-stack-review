@@ -1,11 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
+import {logoutUser} from '../redux/reducer'
 
-export default function Profile(props) {
+function Profile(props) {
 
     const logout = () => {
         axios.delete('/auth/logout').then( () => {
-            props.history.push('/')
+            props.logoutUser();
+            props.history.push('/');
         })
     }
 
@@ -16,3 +19,6 @@ export default function Profile(props) {
         </div>
     )
 }
+
+const mapStateToProps = reduxState => reduxState;
+export default connect(mapStateToProps, {logoutUser})(Profile)
